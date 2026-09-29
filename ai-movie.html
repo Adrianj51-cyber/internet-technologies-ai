@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Film Showcase</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --text: #c9d1d9;
+      --heading: #f0f6fc;
+      --accent: #58a6ff;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      margin-bottom: 24px;
+    }
+
+    .back-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      color: var(--heading);
+      font-size: 2.25rem;
+      margin: 0 0 10px 0;
+    }
+
+    .meta {
+      font-size: 0.9rem;
+      color: #8b949e;
+      margin-bottom: 24px;
+    }
+
+    /* 16:9 Video Wrapper */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      background: #000;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      margin-bottom: 30px;
+    }
+
+    .video-wrapper video,
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .details {
+      background: var(--card-bg);
+      padding: 24px;
+      border-radius: 8px;
+      border: 1px solid #30363d;
+    }
+
+    .details h2 {
+      color: var(--heading);
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+
+    .tag-list {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .tag {
+      background: #21262d;
+      border: 1px solid #30363d;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <header>
+      <a href="index.html" class="back-link">&larr; Back to Main Page</a>
+      <h1>Project Chimera</h1>
+      <p class="meta">Generated with Runway Gen-3 &bull; Midjourney v6 &bull; ElevenLabs</p>
+    </header>
+
+    <!-- Video Player -->
+    <div class="video-wrapper">
+      <!-- Option A: Direct Video File -->
+      <video controls poster="thumbnail.jpg">
+        <source src="movie.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Option B: Embed (Uncomment if using YouTube/Vimeo instead) -->
+      <!-- <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe> -->
+    </div>
+
+    <!-- Description & Pipeline Info -->
+    <section class="details">
+      <h2>Synopsis & Generation Pipeline</h2>
+      <p>
+        An experimental short film generated entirely through machine learning models. 
+        Visual sequences were animated using text-to-video diffusion, voice synthesis 
+        powered the narration, and dynamic score elements were arranged via generative audio.
+      </p>
+
+      <div class="tag-list">
+        <span class="tag">Text-to-Video</span>
+        <span class="tag">AI Cinema</span>
+        <span class="tag">Neural Audio</span>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
